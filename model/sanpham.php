@@ -3,8 +3,8 @@ function insert_sanpham($tensp,$hinh,$mota,$giasp,$iddm){
     $sql="INSERT INTO sanpham(name_sanpham,img,mota,gia,id_danhmuc) values('$tensp','$hinh','$mota','$giasp','$iddm')";
     pdo_execute($sql);
 }
-function delete_sanpham($idsp){
-    $sql="delete from sanpham where id_sanpham=".$idsp;
+function delete_sanpham($id_sanpham){
+    $sql="delete from sanpham where id_sanpham=".$id_sanpham;
     pdo_query($sql);
 }
 function load_all_sanpham($kyw,$iddm){
@@ -13,7 +13,7 @@ function load_all_sanpham($kyw,$iddm){
         $sql.=" and name_sanpham like '%".$kyw."%'";
     }
     if($iddm>0){
-        $sql.=" and iddm ='".$iddm."' ";
+        $sql.=" and id_danhmuc ='".$iddm."' ";
     }
     $sql.=" order by id_sanpham desc";
     $listsanpham = pdo_query($sql);

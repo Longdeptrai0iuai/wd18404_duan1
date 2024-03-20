@@ -49,7 +49,7 @@ if(isset($_GET['act'])){
                 $giasp=$_POST['giasp'];
                 $mota=$_POST['mota'];
                 $hinh=$_FILES['hinh']['name'];
-                $target_dir = "../upload/";
+                $target_dir = "../image/";
                 $target_file = $target_dir.basename($_FILES['hinh']['name']);
                 if(move_uploaded_file($_FILES['hinh']['tmp_name'], $target_file)){
 
@@ -61,6 +61,25 @@ if(isset($_GET['act'])){
             }
             $listdanhmuc=load_all_danhmuc();
             include "sanpham/add.php";
+            break;
+        case 'listsp':
+            if(isset($_POST['listok']) && ($_POST['listok'])){
+                $kyw=$_POST['kyw'];
+                $iddm=$_POST['iddm'];
+            }else {
+                $kyw="";
+                $iddm= 0;
+            }
+            $listdanhmuc=load_all_danhmuc();
+            $listsanpham=load_all_sanpham($kyw,$iddm);
+            include "sanpham/list.php";
+            break;
+        case 'xoasp':
+            if(isset($_GET['id']) && $_GET['id']>0){
+                delete_sanpham($_GET['id']);    
+            }
+            $listsanpham=load_all_sanpham("",0);
+            include "sanpham/list.php";
             break;
         default:
             include "home.php";

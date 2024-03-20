@@ -22,7 +22,7 @@
                     <ion-icon name="folder-open-outline"></ion-icon>
                     Quản Lý Danh Mục
                 </a></li>
-                <li><a href="index.php?act=addsp">
+                <li><a href="index.php?act=listsp">
                     <ion-icon name="shirt-outline"></ion-icon>
                     Quản Lý Sản Phẩm
                 </a></li>
