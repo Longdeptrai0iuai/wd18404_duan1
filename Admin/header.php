@@ -7,17 +7,41 @@
     <link rel="stylesheet" href="../css/styleadmin.css">
 </head>
 <body>
-    <div class="boxcenter">
-        <div class="row mb headeradmin">
-            <h1>Trang Website Quản Trị</h1>
-        </div>
-        <div class="row mb menu">
-        <ul>
-        <li><a class="active" href="index.php">Trang Chủ</a></li>
-        <li><a href="#news">Áo Pholo</a></li>
-        <li><a href="#contact">Áo Sơ Mi</a></li>
-        <li><a href="#about">Khuyến Mãi</a></li>
-        <li><a href="#about">Liên Hệ</a></li>
-        </ul>
-        </div>
+        <nav> 
+            <div class="imagelogo">
+            <img class="logo" src="../image/logo.png" alt=""> 
+            </div>   
+           
+            <ul>
+           
+                <li><a href="index.php">
+                    <ion-icon name="home-outline"></ion-icon>
+                    Home
+                </a></li>
+                <li><a href="index.php?act=dsdm">
+                    <ion-icon name="folder-open-outline"></ion-icon>
+                    Quản Lý Danh Mục
+                </a></li>
+                <li><a href="index.php?act=addsp">
+                    <ion-icon name="shirt-outline"></ion-icon>
+                    Quản Lý Sản Phẩm
+                </a></li>
+                <li><a href="">
+                    <ion-icon name="person-circle-outline"></ion-icon>
+                    Quản Lý Tài Khoản
+                </a></li>
+                <li><a href="">
+                    <ion-icon name="chatbox-outline"></ion-icon>
+                    Quản Lý Bình Luận
+                </a></li>
+                <li><a href="">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                    Quản Lý Đơn Hàng
+                </a></li>
+                <li><a href="">
+                    <ion-icon name="cellular-outline"></ion-icon>    
+                    Thống Kê
+                </a></li>
+            </ul>
+        </nav>
        
