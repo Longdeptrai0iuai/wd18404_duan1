@@ -36,6 +36,45 @@ nav ul {
     list-style-type: none;
     display: flex;
     padding-left:70px;
+    font-weight:600;
+   
+}
+.khung1{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    padding: 0px 90px;
+    position: relative;
+}
+.logo3{
+    width: 300px;
+    margin: 110px 50px;
+}
+.left{
+    position: absolute;
+    top:130px;
+    right:200px;
+
+}
+.left span{
+    font-size: 30px;
+}
+.logo1 span{
+    font-size: 30px;
+    position: absolute;
+    top:130px;
+    left:150px;
+}
+.logo1 form input{
+    position: absolute;
+    top:130px;
+    left:200px;
+    height:30px;
+    width:300px;
+    border:none;
+    border-bottom:2px solid #000;
+    background:transparent;
+    outline:0;
 }
     </style>
 </head>
@@ -46,22 +85,21 @@ nav ul {
             <div class="logo1">
                 <form action="" method="get" id="">
                     <span><i class="fa-solid fa-magnifying-glass"></i></span>
-                    <input style="border: none;" type="text" placeholder="Tìm kiếm..." value="" maxlength="70"
+                    <input type="text" placeholder="Tìm kiếm..." value="" maxlength="70"
                         name="query" id="search">
-                    <hr>
                 </form>
                 <!-- <span><i class="fa-solid fa-magnifying-glass"></i></span>  -->
             </div>
             <div class="logo2">
                 <img src="img/logo.png" alt="">
             </div>
-            <center>
                 <div class="logo3">
-                    <span><i class="fa-regular fa-user"></i></span>
-                    <span><i class="fa-regular fa-heart"></i></span>
+                    <div class="left">
+                   <button></button> <span><i class="fa-regular fa-user"></i></span>
+                <button><span><i class="fa-regular fa-heart"></i></span></button>    
                     <span><i class="fa-solid fa-cart-shopping"></i></span>
+                    </div>
                 </div>
-            </center>
         </div>
 
         <nav>
@@ -75,7 +113,27 @@ nav ul {
         </nav>
 
         <header>
-            <img style="width: 100%;height: 400px;" src="img/banner.png" alt="">
+            <!-- Slideshow container -->
+<div class="slideshow-container">
+
+<!-- Full-width images with number and caption text -->
+<div class="mySlides fade">
+  <img src="image/banner1.webp" style="width:100%;height: 600px;">
+</div>
+
+<div class="mySlides fade">
+  <img src="image/slide-img1.webp" style="width:100%;height: 600px;">
+</div>
+
+<div class="mySlides fade">
+  <img src="image/slide-img3.webp" style="width:100%;height: 600px;">
+</div>
+<!-- The dots/circles -->
+<div style="text-align:center">
+<span class="dot" onclick="currentSlide(1)"></span>
+<span class="dot" onclick="currentSlide(2)"></span>
+<span class="dot" onclick="currentSlide(3)"></span>
+</div>
             <br>
             <br>
             <img style="width: 100%;height: 200px;" src="img/banner2.png" alt="">

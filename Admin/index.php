@@ -111,8 +111,13 @@ if(isset($_GET['act'])){
                 }else{
 
                 }
-                update_sanpham($idsp,$tensp,$hinh,$giasp,$mota,$iddm);
-                $thongbao="Cập nhật thành công!!";
+                if($tensp=="" || $giasp=="" || $mota==""){
+                    $thongbao='<p class="thongbao">Thêm không thành công, hãy nhập đủ dữ liệu!!</p>';
+                }else{
+                    update_sanpham($idsp,$tensp,$hinh,$giasp,$mota,$iddm);
+                    $thongbao="Cập nhật thành công!!";
+                }
+
             }
             $listdanhmuc=load_all_danhmuc();
             $listsanpham=load_all_sanpham("",0);
