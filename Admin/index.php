@@ -10,8 +10,12 @@ if(isset($_GET['act'])){
                 //Ktra xem người dùng có click vào nút add hay không
                 if(isset($_POST['themmoi']) && $_POST['themmoi']){
                     $tenloai=$_POST['tenloai'];
-                    insert_danhmuc($tenloai);
-                    $thongbao="Thêm mới thành công!!";
+                    if($tenloai==""){
+                        $thongbao='<p class="thongbao">Thêm không thành công, hãy nhập đủ dữ liệu!!</p>';
+                    }else{
+                        insert_danhmuc($tenloai);
+                        $thongbao="Thêm mới thành công!!";
+                    }
                 }
                 include "danhmuc/add.php";
                 break;
@@ -56,8 +60,12 @@ if(isset($_GET['act'])){
                 }else{
 
                 }
-                insert_sanpham($tensp,$hinh,$mota,$giasp,$iddm);
-                $thongbao="Thêm thành công!!";
+                if($tensp=="" || $giasp=="" || $mota==""){
+                    $thongbao='<p class="thongbao">Thêm không thành công, hãy nhập đủ dữ liệu!!</p>';
+                }else{
+                    insert_sanpham($tensp,$hinh,$mota,$giasp,$iddm);
+                    $thongbao="Thêm thành công!!";
+                }
             }
             $listdanhmuc=load_all_danhmuc();
             include "sanpham/add.php";
@@ -80,6 +88,35 @@ if(isset($_GET['act'])){
             }
             $listsanpham=load_all_sanpham("",0);
             include "sanpham/list.php";
+            break;
+        case 'suasp':
+            if(isset($_GET['id']) && $_GET['id']>0){
+                $sanpham = load_one_sanpham($_GET['id']);
+            }
+            $listdanhmuc=load_all_danhmuc();
+            include 'sanpham/update.php';
+            break;
+        case 'updatesp':
+            if(isset($_POST['capnhat']) && $_POST['capnhat']){
+                $iddm=$_POST['iddm'];
+                $idsp=$_POST['id'];
+                $tensp=$_POST['tensp'];
+                $giasp=$_POST['giasp'];
+                $mota=$_POST['mota'];
+                $hinh=$_FILES['hinh']['name'];
+                $target_dir = "../image/";
+                $target_file = $target_dir.basename($_FILES['hinh']['name']);
+                if(move_uploaded_file($_FILES['hinh']['tmp_name'], $target_file)){
+
+                }else{
+
+                }
+                update_sanpham($idsp,$tensp,$hinh,$giasp,$mota,$iddm);
+                $thongbao="Cập nhật thành công!!";
+            }
+            $listdanhmuc=load_all_danhmuc();
+            $listsanpham=load_all_sanpham("",0);
+            include 'sanpham/list.php';
             break;
         default:
             include "home.php";
