@@ -1,3 +1,16 @@
+<div class="tinkhuyenmai">
+            <div class="tinkhuyenmai1">
+                <h2>Đăng ký nhận tin khuyến mãi</h2><br>
+                <input style="width: 250px;" type="text" placeholder="Nhập email của bạn ..." value="" name="" id="">
+                <button style="background-color: white; border: 1px solid black;">ĐĂNG KÝ</button>
+            </div>
+            <div class="tinkhuyenmai2">
+                <img style="width: 200px;height: 60px;" src="img/tinkhuyenmai.png" alt="">
+                <img style="width: 200px;height: 200px;" src="img/logo.png" alt="">
+            </div>
+        </div>
+        <hr>
+        <br>
 <footer>
             <div class="ft1">
                 <h3>Thông Tin Chi Tiết</h3> <br>
@@ -39,5 +52,24 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";
   setTimeout(showSlides, 5000); // Change image every 2 seconds
 }
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const minusButton = document.querySelector(".minus-btn");
+        const plusButton = document.querySelector(".plus-btn");
+        const inputField = document.querySelector(".qty-input");
+
+        minusButton.addEventListener("click", function () {
+            let currentValue = parseInt(inputField.value);
+            if (currentValue > 1) {
+                inputField.value = currentValue - 1;
+            }
+        });
+
+        plusButton.addEventListener("click", function () {
+            let currentValue = parseInt(inputField.value);
+            inputField.value = currentValue + 1;
+        });
+    });
 </script>
 </html>

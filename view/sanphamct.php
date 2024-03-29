@@ -9,21 +9,37 @@
             <div class="ctsp2">
             
                 <h2><?=$name_sanpham?></h2><br>
-                Product code:PVN5274 <br><br>
-                <p style="font-size: 20px; color: red;"><?=$gia?></p> <br>
+                Product code:<?=$id_sanpham?> <br><br>
+                <p style="font-size: 20px; color: red;"><?=$gia."đ"?></p> <br>
+                <form action="" method="post">
                 KÍCH THƯỚC <br> <br>
-                <input style="border-radius: 70px;" value=" M " type="submit">
-                <input style="border-radius: 70px;" value=" L " type="submit">
-                <input style="border-radius: 70px;" value=" XL " type="submit">
-                <input style="border-radius: 70px;" value="XXL" type="submit">
+                <div data-value="M">
+                <input style="border-radius:50%;" value=" M " type="radio" name="size">
+                <label for="">M</label>
+                </div>
+                <div data-value="L">
+                <input style="border-radius:50%;" value=" L " type="radio" name="size">
+                <label for="">L</label>
+                </div>
+                <div data-value="XL">
+                <input style="border-radius:50%;" value=" XL " type="radio" name="size">
+                <label for="">XL</label>
+                </div>
+                <div data-value="XXL">
+                <input style="border-radius:50%;" value=" XXL " type="radio" id="sizeXXL">
+                <label for="">XXL</label>
+                </div>
                 <br> <br>
                 SỐ LƯỢNG <br>
                 <div class="quantity">
-                    <button class="minus-btn" type="button">-</button>
+                <button class="minus-btn" type="button">-</button>
                     <input type="text" class="qty-input" value="1">
-                    <button class="plus-btn" type="button">+</button> | <button class="giohangctsp">THÊM VÀO GIỎ
+                    <button class="plus-btn" type="button">+</button> 
+                | <button class="giohangctsp">THÊM VÀO GIỎ
                         HÀNG</button>
                 </div>
+                </form>
+                
                 <br>
                 <br>
                 <div class="ctsp3">
@@ -129,18 +145,3 @@
                 </form>
             </div>
         </div>
-
-        <div class="tinkhuyenmai">
-            <div class="tinkhuyenmai1">
-                <h2>Đăng ký nhận tin khuyến mãi</h2><br>
-                <input style="width: 250px;" type="text" placeholder="Nhập email của bạn ..." value="" name="" id="">
-                <button style="background-color: white; border: 1px solid black;">ĐĂNG KÝ</button>
-            </div>
-            <div class="tinkhuyenmai2">
-                <img style="width: 200px;height: 60px;" src="img/tinkhuyenmai.png" alt="">
-                <img style="width: 200px;height: 200px;" src="img/logo.png" alt="">
-            </div>
-        </div>
-        <hr>
-        <br>
-        

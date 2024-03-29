@@ -1,25 +1,51 @@
+<header>
+            <!-- Slideshow container -->
+<div class="slideshow-container">
 
+<!-- Full-width images with number and caption text -->
+<div class="mySlides fade">
+  <img src="image/banner1.webp" style="width:100%;height: 700px;">
+</div>
+
+<div class="mySlides fade">
+  <img src="image/slide-img1.webp" style="width:100%;height: 700px;">
+</div>
+
+<div class="mySlides fade">
+  <img src="image/slide-img3.webp" style="width:100%;height: 700px;">
+</div>
+<!-- The dots/circles -->
+<div style="text-align:center">
+<span class="dot" onclick="currentSlide(1)"></span>
+<span class="dot" onclick="currentSlide(2)"></span>
+<span class="dot" onclick="currentSlide(3)"></span>
+</div>
+            <br>
+            <br>
+         <div><img style="width: 100%;height: 200px;" src="img/banner2.png" alt=""></div>   
+        </header>
 <div class="tintuc">
             <div class="khungbe1">
-                <a href="https://feaerstore.com/san-pham-khuyen-mai" title="THỜI TRANG XU HƯỚNG">
+                <a href="#" title="THỜI TRANG XU HƯỚNG">
                     <img src="img/anh2 (2).png" alt="">
                 </a>
-                <div class="cap-xxx">
-                    <h3>THỜI TRANG XU HƯỚNG</h3>
                 </div>
-            </div>
+                <!-- <div class="cap-xxx">
+                    <h3>THỜI TRANG XU HƯỚNG</h3>
+                </div> -->
             <div class="khungbe2">
-                <a href="https://feaerstore.com/new-arrival-2021" title="SIÊU DEAL GIẢM SỐC">
+                <a href="#" title="SIÊU DEAL GIẢM SỐC">
                     <img src="img/anh2 (1).png" alt="">
                 </a>
-                <div class="cap-xxx">
-                    <h3>SIÊU DEAL GIẢM SỐC</h3>
                 </div>
-            </div>
+                <!-- <div class="cap-xxx">
+                    <h3>SIÊU DEAL GIẢM SỐC</h3>
+                </div> -->
         </div>
         <br><br>
+        <div class="conTent">
         <center>
-            <h2>TẤT CẢ SẢN PHẨM</h2>
+            <h2>SẢN PHẨM NỔI BẬT</h2>
         </center>
         <br><br>
         <div class="sanpham">
@@ -39,15 +65,14 @@
                    <a class="namesp" href="'.$linksp.'"><p>'.$name_sanpham.'</p></a> 
                     <span class="giasp">'.$gia.'đ</span>
                     <form action="" method="post" class="variants" id="" enctype="multipart/form-data">
-                        <button class="giohang" title="Thêm vào giỏ hàng">
-                            + Thêm vào giỏ hàng
-                        </button>
+                    <input class="giohang" type="submit" name="addtocart" value="+Thêm vào giỏ hàng">
                     </form>
                 </div>';
                     $i+=1;
                   }
                 
                 ?>
+               
             <!-- <div class="sp1">
                 <img src="img/SP6.webp" alt="">
                 <p>Áo Sơ Mi DELUXE</p>
@@ -174,17 +199,5 @@
                 </div>
             </div> -->
         </div>
-
-        <div class="tinkhuyenmai">
-            <div class="tinkhuyenmai1">
-                <h2>Đăng ký nhận tin khuyến mãi</h2><br>
-                <input style="width: 250px;" type="text" placeholder="Nhập email của bạn ..." value="" name="" id="">
-                <button style="background-color: white; border: 1px solid black;">ĐĂNG KÝ</button>
-            </div>
-            <div class="tinkhuyenmai2">
-                <img style="width: 200px;height: 60px;" src="img/tinkhuyenmai.png" alt="">
-                <img style="width: 200px;height: 200px;" src="img/logo.png" alt="">
-            </div>
         </div>
-        <hr>
-        <br>
+       

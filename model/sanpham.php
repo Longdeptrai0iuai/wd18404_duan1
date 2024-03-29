@@ -7,11 +7,8 @@ function delete_sanpham($id_sanpham){
     $sql="delete from sanpham where id_sanpham=".$id_sanpham;
     pdo_query($sql);
 }
-function load_all_sanpham($kyw,$iddm){
+function load_all_sanpham($iddm){
     $sql="select * from sanpham where 1"; 
-    if($kyw!=""){
-        $sql.=" and name_sanpham like '%".$kyw."%'";
-    }
     if($iddm>0){
         $sql.=" and iddm ='".$iddm."' ";
     }
@@ -20,7 +17,7 @@ function load_all_sanpham($kyw,$iddm){
     return $listsanpham;
 }
 function load_all_sanpham_home(){
-    $sql="select * from sanpham where 1 order by id_sanpham desc limit 0,8"; 
+    $sql="select * from sanpham where 1 order by id_sanpham desc limit 0,9"; 
     $listsanpham = pdo_query($sql);
     return $listsanpham;
 }
