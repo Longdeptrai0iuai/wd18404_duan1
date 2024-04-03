@@ -55,16 +55,16 @@
                     extract($sp);
                     $linksp="index.php?act=sanphamct&idsp=".$id_sanpham;
                     $hinh=$img_path.$img;
-                if(($i==2)||($i==5)||($i==8)){
-                    $mr="";
-                }else{
-                    $mr="mr";
-                }
                     echo '<div class="sp1">
                     <a href="'.$linksp.'"><img src="'.$hinh.'" alt=""></a>   
                    <a class="namesp" href="'.$linksp.'"><p>'.$name_sanpham.'</p></a> 
                     <span class="giasp">'.$gia.'đ</span>
-                    <form action="" method="post" class="variants" id="" enctype="multipart/form-data">
+                    <form action="index.php?act=addtocart" method="post" class="variants" id="" enctype="multipart/form-data">
+                    <input type="hidden" name="id" value="'.$id_sanpham.'">
+                    <input type="hidden" name="name" value="'.$name_sanpham.'">
+                    <input type="hidden" name="image" value="'.$img.'">
+                    <input type="hidden" name="size" value="L">
+                    <input type="hidden" name="price" value="'.$gia.'">
                     <input class="giohang" type="submit" name="addtocart" value="+Thêm vào giỏ hàng">
                     </form>
                 </div>';
@@ -72,7 +72,12 @@
                   }
                 
                 ?>
-               
+                <select name="" id="">
+                    <option value="M"></option>
+                    <option value="L"></option>
+                    <option value="XL"></option>
+                </select>
+               <input type="hidden" name="id" value="">
             <!-- <div class="sp1">
                 <img src="img/SP6.webp" alt="">
                 <p>Áo Sơ Mi DELUXE</p>

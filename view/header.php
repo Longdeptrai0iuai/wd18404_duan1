@@ -21,9 +21,11 @@ font-family: sans-serif;}
     position: relative;
 }
 .sl select{
-    height:30px;
+    height:40px;
+    font-size:15px;
+    width: 160px;
 }
-        .sanpham{
+.sanpham{
     width: 100%;
     height: 1200px;
     padding: 40px 0;
@@ -79,6 +81,11 @@ nav ul {
     right:200px;
 
 }
+.user{
+    position: absolute;
+    top:0px;
+    right:-50px;
+}
 .left span{
     font-size: 30px;
 }
@@ -88,7 +95,7 @@ nav ul {
     top:130px;
     left:150px;
 }
-.logo1 form input{
+.logo1 form input[type=text]{
     position: absolute;
     top:130px;
     left:200px;
@@ -185,7 +192,6 @@ input[type=text],
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
-  border-radius: 4px;
   box-sizing: border-box;
 }
 input[type=email],
@@ -195,7 +201,6 @@ input[type=email],
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
-  border-radius: 4px;
   box-sizing: border-box;
 }
 .fdn2 input[type=int],
@@ -205,7 +210,6 @@ input[type=email],
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
-  border-radius: 4px;
   box-sizing: border-box;
 }
 .fdn2 input[type=password],
@@ -215,7 +219,6 @@ input[type=email],
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
-  border-radius: 4px;
   box-sizing: border-box;
 }
 .fdn1{
@@ -276,6 +279,125 @@ input[type=email],
     padding: 15px 15px;
     width: 550px;
 }
+.logo1 input[type="submit"]{
+    background-image:url('image/Search-icon.png');
+    background-size:30px;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-color:white;
+    border: 1px solid white;
+    height:50px;
+    width:50px;
+    position: absolute;
+    top:130px;
+    left:150px;
+}
+.sl input[type="submit"]{
+    border: 1px solid black;
+    background-color:white;
+    height:30px;
+    width:70px;
+}
+.resultsearch{
+    padding-top:50px;
+    padding-left:180px;
+    font-size:20px;
+}
+.informationUser{
+    display:none;
+    z-index: 1000;
+    width: 200px;
+    position: absolute;
+    top:35px;
+    right:5px;
+    background-color:#eee;
+}
+.informationUser ul li a{
+    text-decoration:none;
+    
+}
+.informationUser ul li{
+    list-style:none ;
+}
+.nameuser{
+    width: 20px;
+    position: absolute;
+    top:10px;
+    right:160px;
+}
+.iconuser{
+    width: 20px;
+    position: absolute;
+    top:0px;
+    right:190px;
+}
+.user:hover .informationUser{
+    display:block;
+}
+.hoso{
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:370px;
+    font-size:20px;
+}
+.cart table{
+    width: 70%;
+    border-collapse: collapse;
+   text-align:center;
+   margin-left:150px;
+}
+
+.cart table td{
+    padding: 10px 20px;
+    border: 1px #ccc solid;
+}
+.boxtitle{
+    padding-left:150px;
+    padding-top:30px;
+    padding-bottom:30px;
+    font-size:30px;
+}
+.bill{
+    position: relative;
+}
+.btn input[type="submit"]{
+    border-radius: 5px;
+    padding: 5px 10px;
+    height:30px;
+    background-color: white;
+    border: 1px #ccc solid;
+    position: absolute;
+    top:10px;
+    left:150px;
+}
+.btn input[type="button"] {
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px #ccc solid;
+    position: absolute;
+    height:30px;
+    top:10px;
+    left:280px;
+}
+.delete{
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px #ccc solid;
+}
+.boxcontent input[type="text"]{
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px #ccc solid;
+    width: 100%;
+    margin-left:150px;
+    
+}
+.ttbill{
+    padding-left:150px;
+}
     </style>
 </head>
 
@@ -283,10 +405,10 @@ input[type=email],
     <div class="khungto">
         <div class="khung1">
             <div class="logo1">
-                <form action="" method="get" id="">
-                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                <form action="index.php?act=searchproduct" method="post" id="">
                     <input type="text" placeholder="Tìm kiếm..." value="" maxlength="70"
-                        name="query" id="search">
+                        name="kyw" id="search">
+                        <input type="submit" value="" name="timkiem">
                 </form>
                 <!-- <span><i class="fa-solid fa-magnifying-glass"></i></span>  -->
             </div>
@@ -294,20 +416,61 @@ input[type=email],
                 <img src="img/logo.png" alt="">
             </div>
             <?php
-            // if(isset($_SESSION['user'])){
-            //     extract($_SESSION['user']);
-            // }
-                ?>
+            if(isset($_SESSION['user'])){
+                extract($_SESSION['user']);
+                            ?>
                 <div class="logo3">
                     <div class="left">
-                <a href="index.php?act=login" ><span><i class="fa-regular fa-user">
-               
+                        <div class="user">
+                        <a class="iconuser" href="index.php?act=inforuser"><span><i class="fa-regular fa-user">
+                        </i></span></a> <p class="nameuser"><?php if(isset($username)) echo $username?></p>
+                        <div class="informationUser">
+                <ul>         
+                <li><a href="index.php?act=inforuser">
+                <ion-icon name="person-circle-outline"></ion-icon>
+                    Thông tin cá nhân
+                </a></li>
+                <li><a href="index.php?act=inforuser">
+                <?php
+                if($role==1){?>
+                            <li><a href="admin/index.php">
+                            <ion-icon name="people-circle-outline"></ion-icon>   
+                            Đăng nhập admin</a></li>
+                            <?php }?>
+                </a></li>
+                <li><a href="index.php?act=mybill">
+                <ion-icon name="bag-handle-outline"></ion-icon>
+                    Đơn Mua
+                </a></li>
+                <li><a href="index.php?act=listsp">
+                <ion-icon name="key-outline"></ion-icon>
+                    Đổi Mật Khẩu
+                </a></li>
+                <li><a href="index.php?act=thoat">
+                <ion-icon name="log-out-outline"></ion-icon>
+                    Đăng Xuất
+                </a></li>
+                </ul>
+            </div>
+                        </div>        
+
+                <span><i class="fa-regular fa-heart"></i></span>    
+                   <a href="index.php?act=addtocart"><span><i class="fa-solid fa-cart-shopping"></i></span></a> 
+                    </div>
+                </div>
+                <?php   
+                        }else{
+                        ?>
+                        <div class="logo3">
+                    <div class="left">
+                <a href="index.php?act=login"><span><i class="fa-regular fa-user">
+                </i></span></a> 
                 
-                </i></span></a>     
                 <span><i class="fa-regular fa-heart"></i></span>    
                     <span><i class="fa-solid fa-cart-shopping"></i></span>
                     </div>
                 </div>
+                <?php } ?>
         </div>
 
         <nav>

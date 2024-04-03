@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang Quản Trị</title>
     <link rel="stylesheet" href="../css/styleadmin.css">
+    <style>
+        .formcontent input[type="email"]{
+  width: 50%;
+  border: 1px #ccc solid;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+    </style>
 </head>
 <body>
         <nav> 
@@ -26,7 +34,7 @@
                     <ion-icon name="shirt-outline"></ion-icon>
                     Quản Lý Sản Phẩm
                 </a></li>
-                <li><a href="">
+                <li><a href="index.php?act=dskh">
                     <ion-icon name="person-circle-outline"></ion-icon>
                     Quản Lý Tài Khoản
                 </a></li>

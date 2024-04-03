@@ -26,7 +26,7 @@
                 <label for="">XL</label>
                 </div>
                 <div data-value="XXL">
-                <input style="border-radius:50%;" value=" XXL " type="radio" id="sizeXXL">
+                <input style="border-radius:50%;" value=" XXL " type="radio" name="size">
                 <label for="">XXL</label>
                 </div>
                 <br> <br>
@@ -89,59 +89,25 @@
             <h2>SẢN PHẨM LIÊN QUAN</h2>
         </center>
         <br><br>
-        <div class="sanpham">
-            <div class="sp1">
-                <img src="img/SP6.webp" alt="">
-                <p>Áo Sơ Mi DELUXE</p>
-                <span>379.000 đ</span>
-                <form action="" method="post" class="variants" id="" enctype="multipart/form-data">
-                    <button class="giohang" title="Thêm vào giỏ hàng">
-                        + Thêm vào giỏ hàng
-                    </button>
-                </form>
-            </div>
-
-            <div class="sp2">
-                <img src="img/SP2.webp" alt="">
-                <p>Áo Sơ Mi DELUXE</p>
-                <span>379.000 đ</span>
-                <form action="" method="post" class="variants" id="" enctype="multipart/form-data">
-                    <button class="giohang" title="Thêm vào giỏ hàng">
-                        + Thêm vào giỏ hàng
-                    </button>
-                </form>
-            </div>
-
-            <div class="sp3">
-                <img src="img/SP3.webp" alt="">
-                <p>Áo Sơ Mi DELUXE</p>
-                <span>379.000 đ</span>
-                <form action="" method="post" class="variants" id="" enctype="multipart/form-data">
-                    <button class="giohang" title="Thêm vào giỏ hàng">
-                        + Thêm vào giỏ hàng
-                    </button>
-                </form>
-            </div>
-
-            <div class="sp4">
-                <img src="img/SP4.webp" alt="">
-                <p>Áo Sơ Mi DELUXE</p>
-                <span>379.000 đ</span>
-                <form action="" method="post" class="variants" id="" enctype="multipart/form-data">
-                    <button class="giohang" title="Thêm vào giỏ hàng">
-                        + Thêm vào giỏ hàng
-                    </button>
-                </form>
-            </div>
-
-            <div class="sp5">
-                <img src="img/SP5.webp" alt="">
-                <p>Áo Sơ Mi DELUXE</p>
-                <span>379.000 đ</span>
-                <form action="" method="post" class="variants" id="" enctype="multipart/form-data">
-                    <button class="giohang" title="Thêm vào giỏ hàng">
-                        + Thêm vào giỏ hàng
-                    </button>
-                </form>
-            </div>
+        <div class="sanphamall">
+        <?php
+                 foreach ($sp_cungloai as $sp_cungloai) {
+                    $i=0;
+                    extract($sp_cungloai);
+                    $linksp="index.php?act=sanphamct&idsp=".$id_sanpham;
+                    $hinh=$img_path.$img;
+                    echo '<div class="sp1">
+                    <a href="'.$linksp.'"><img src="'.$hinh.'" alt=""></a>   
+                   <a class="namesp" href="'.$linksp.'"><p>'.$name_sanpham.'</p></a> 
+                    <span class="giasp">'.$gia.'đ</span>
+                    <form action="" method="post" class="variants" id="" enctype="multipart/form-data">
+                        <button class="giohang" title="Thêm vào giỏ hàng">
+                            + Thêm vào giỏ hàng
+                        </button>
+                    </form>
+                </div>';
+                    $i+=1;
+                  }
+                
+                ?>
         </div>

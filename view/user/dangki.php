@@ -8,7 +8,7 @@
   <label >Password</label><br>
   <input type="password" name="password" placeholder="Nhập mật khẩu của bạn.."><br>
   <label >Họ và Tên</label><br>
-  <input type="text" id="fname" name="name" placeholder="Nhập họ và tên của bạn.."><br>
+  <input type="text"  name="name" placeholder="Nhập họ và tên của bạn.."><br>
   <label class="fdn3" >Email</label><br>
   <input type="email"  name="email" placeholder="Nhập email của bạn.."><br>
   <label class="fdn4" >Số điện thoại</label><br>

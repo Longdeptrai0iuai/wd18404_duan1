@@ -2,6 +2,7 @@
 include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
+include "../model/taikhoan.php";
 include "header.php";
 if(isset($_GET['act'])){
     $act= $_GET['act'];
@@ -122,6 +123,39 @@ if(isset($_GET['act'])){
             $listdanhmuc=load_all_danhmuc();
             $listsanpham=load_all_sanpham("",0);
             include 'sanpham/list.php';
+            break;
+        case 'dskh':
+            $listtaikhoan= load_all_taikhoan();
+            include 'taikhoan/list.php';
+            break;
+        case 'xoatk':
+            if(isset($_GET['id']) && $_GET['id']>0){
+                delete_taikhoan($_GET['id']);    
+            }
+            $listtaikhoan=load_all_taikhoan();
+            include "taikhoan/list.php";
+            break;
+        case 'suatk':
+            if(isset($_GET['id']) && $_GET['id']>0){
+                $taikhoan = load_one_taikhoan($_GET['id']);
+            }
+            include 'taikhoan/update.php';
+            break;
+        case 'update_taikhoan':
+            if(isset($_POST['capnhat']) && $_POST['capnhat']){
+                $idtk=$_POST['id'];
+                $username=$_POST['user'];
+                $password=$_POST['pass'];
+                $name=$_POST['pass'];
+                $email=$_POST['email'];
+                $address=$_POST['address'];
+                $phone=$_POST['phone'];
+                $role=$_POST['role'];
+                update_taikhoan_admin($idtk,$username,$password,$name,$email,$address,$phone,$role);
+                $thongbao="Cập nhật thành công!!";
+            }
+            $listtaikhoan=load_all_taikhoan();
+            include 'taikhoan/list.php';
             break;
         default:
             include "home.php";

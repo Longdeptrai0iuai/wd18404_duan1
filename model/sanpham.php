@@ -16,21 +16,20 @@ function load_all_sanpham($iddm){
     $listsanpham = pdo_query($sql);
     return $listsanpham;
 }
+function load_all_sanpham_keyword($kyw){
+    $sql="select * from sanpham where 1"; 
+    if($kyw!=""){
+        $sql.=" and name_sanpham like '%".$kyw."%'";
+    }
+    $sql.=" order by id_sanpham desc";
+    $listsanpham = pdo_query($sql);
+    return $listsanpham;
+}
 function load_all_sanpham_home(){
     $sql="select * from sanpham where 1 order by id_sanpham desc limit 0,9"; 
     $listsanpham = pdo_query($sql);
     return $listsanpham;
 }
-function load_all_sanpham_somi(){
-    $sql="select * from sanpham where iddm = 4 order by id_sanpham desc limit 0,10"; 
-    $listsanpham = pdo_query($sql);
-    return $listsanpham;
-}
-// function load_all_sanpham_top10(){
-//     $sql="select * from sanpham where 1 order by luotxem desc limit 0,10"; 
-//     $listsanpham = pdo_query($sql);
-//     return $listsanpham;
-// }
 function load_one_sanpham($idsp){
     $sql="select*from sanpham where id_sanpham = ".$idsp;
     $sp = pdo_query_one($sql);
@@ -47,11 +46,11 @@ function load_one_sanpham($idsp){
 //     }
     
 // }
-// function load_sanpham_cung_loai($idsp,$iddm){
-//     $sql="select*from sanpham where iddm=".$iddm." AND id_sanpham <> ".$idsp;
-//     $listsanpham = pdo_query($sql);
-//     return $listsanpham;
-// }
+function load_sanpham_cung_loai($idsp,$iddm){
+    $sql="select*from sanpham where iddm=".$iddm." AND id_sanpham <> ".$idsp;
+    $listsanpham = pdo_query($sql);
+    return $listsanpham;
+}
 
 function update_sanpham($idsp,$tensp,$hinh,$giasp,$mota,$iddm){
     if($hinh!=""){
