@@ -18,6 +18,7 @@
                     
                     ?>
                 <tr>
+                    <input type="hidden" name="id">
                     <td class="ttbill">Người Đặt Hàng</td>
                     <td><input type="text" name="name" value="<?=$name?>"></td>
                 </tr>
@@ -33,8 +34,6 @@
                     <td class="ttbill">Điện Thoại</td>
                     <td><input type="text" name="phone" value="<?=$phone?>"></td>
                 </tr>
-                    
-                
                 </form>
                
                     

@@ -1,12 +1,14 @@
 <div class="tinkhuyenmai">
             <div class="tinkhuyenmai1">
                 <h2>Đăng ký nhận tin khuyến mãi</h2><br>
-                <input style="width: 250px;" type="text" placeholder="Nhập email của bạn ..." value="" name="" id="">
-                <button style="background-color: white; border: 1px solid black;">ĐĂNG KÝ</button>
+                <input type="text" placeholder="Nhập email của bạn ..." value="" name="" id="">
+                <input type="submit" value="Đăng kí">
             </div>
             <div class="tinkhuyenmai2">
-                <img style="width: 200px;height: 60px;" src="img/tinkhuyenmai.png" alt="">
-                <img style="width: 200px;height: 200px;" src="img/logo.png" alt="">
+            <ion-icon style="width:40px;height:40px;padding:10px;margin-top:105px;" name="logo-facebook"></ion-icon>
+            <ion-icon style="width:40px;height:40px;padding:10px;" name="logo-youtube"></ion-icon>
+            <ion-icon style="width:40px;height:40px;padding:10px;" name="logo-instagram"></ion-icon>
+                <img style="width: 150px;height: 150px;margin-left:200px;margin-top:-120px;" src="img/logo.png" alt="">
             </div>
         </div>
         <hr>

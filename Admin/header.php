@@ -12,6 +12,39 @@
   padding: 5px 10px;
   border-radius: 5px;
 }
+body{
+    background-color:#CCFFFF;
+}
+.cart table{
+    width: 100%;
+    border-collapse: collapse;
+   text-align:center;
+}
+
+.cart table td{
+    padding: 10px 20px;
+    border: 1px #ccc solid;
+}
+.cart table th{
+    padding: 10px 20px;
+    border: 1px #ccc solid;
+    background-color:#eee;
+}
+.contentDM{
+  position: absolute;
+  top: 0px;
+  left: 400px;
+  width: calc(100%-400px);
+  padding-left: 100px;
+}
+.contentDMCTHD{
+  position: absolute;
+  top: 100px;
+  left: 400px;
+  width: calc(100%-400px);
+  padding-left: 100px;
+}
+
     </style>
 </head>
 <body>
@@ -38,15 +71,15 @@
                     <ion-icon name="person-circle-outline"></ion-icon>
                     Quản Lý Tài Khoản
                 </a></li>
-                <li><a href="">
+                <li><a href="index.php?act=dsbl">
                     <ion-icon name="chatbox-outline"></ion-icon>
                     Quản Lý Bình Luận
                 </a></li>
-                <li><a href="">
+                <li><a href="index.php?act=listbill">
                     <ion-icon name="bag-handle-outline"></ion-icon>
                     Quản Lý Đơn Hàng
                 </a></li>
-                <li><a href="">
+                <li><a href="index.php?act=thongke">
                     <ion-icon name="cellular-outline"></ion-icon>    
                     Thống Kê
                 </a></li>

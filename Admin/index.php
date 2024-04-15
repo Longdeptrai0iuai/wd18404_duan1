@@ -2,7 +2,10 @@
 include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
+include "../model/binhluan.php";
 include "../model/taikhoan.php";
+include "../model/cart.php";
+include "global.php";
 include "header.php";
 if(isset($_GET['act'])){
     $act= $_GET['act'];
@@ -80,7 +83,7 @@ if(isset($_GET['act'])){
                 $iddm= 0;
             }
             $listdanhmuc=load_all_danhmuc();
-            $listsanpham=load_all_sanpham($kyw,$iddm);
+            $listsanpham=load_all_sanpham_admin($kyw,$iddm);
             include "sanpham/list.php";
             break;
         case 'xoasp':
@@ -156,6 +159,51 @@ if(isset($_GET['act'])){
             }
             $listtaikhoan=load_all_taikhoan();
             include 'taikhoan/list.php';
+            break;
+        case 'dsbl':
+            $listbinhluan= load_all_binhluan(0);
+            include 'binhluan/list.php';
+            break;
+        case 'xoabl':
+            if(isset($_GET['id']) && $_GET['id']>0){
+                delete_binhluan($_GET['id']);    
+            }
+            $listbinhluan=load_all_binhluan(0);
+            include "binhluan/list.php";
+            break;
+        case 'listbill':
+            $listbill=load_all_bill(0);
+            include "bill/listbill.php";
+            break;
+        case 'suabill':
+            if(isset($_GET['id']) && $_GET['id']>0){
+                $bill = load_one_bill($_GET['id']);
+            }
+            include 'bill/update.php';
+            break;
+        case 'update_bill':
+            if(isset($_POST['capnhat']) && $_POST['capnhat']){
+                $id=$_POST['id'];
+                $status=$_POST['status'];
+                update_bill($id,$status);
+                $thongbao="Cập nhật thành công!!";
+            }
+            $listbill=load_all_bill(0);
+            include 'bill/listbill.php';
+            break;
+        case 'chitietdonhang':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $ctbill=load_all_Historycart($_GET['id']);
+              }
+            include "bill/billchitiet.php";
+            break;
+        case 'thongke':
+            $listthongke= load_all_thongke();
+            include 'thongke/list.php';
+            break;
+        case 'bieudo':
+            $listthongke= load_all_thongke();
+            include 'thongke/bieudo.php';
             break;
         default:
             include "home.php";

@@ -22,7 +22,7 @@
 </div>
             <br>
             <br>
-         <div><img style="width: 100%;height: 200px;" src="img/banner2.png" alt=""></div>   
+         <div class="banner3"><img style="width: 100%;height: 200px;" src="img/banner2.png" alt=""></div>   
         </header>
 <div class="tintuc">
             <div class="khungbe1">
@@ -45,7 +45,7 @@
         <br><br>
         <div class="conTent">
         <center>
-            <h2>SẢN PHẨM NỔI BẬT</h2>
+            <h2>SẢN PHẨM MỚI</h2>
         </center>
         <br><br>
         <div class="sanpham">
@@ -64,6 +64,7 @@
                     <input type="hidden" name="name" value="'.$name_sanpham.'">
                     <input type="hidden" name="image" value="'.$img.'">
                     <input type="hidden" name="size" value="L">
+                    <input type="hidden" name="soluong" value="1">
                     <input type="hidden" name="price" value="'.$gia.'">
                     <input class="giohang" type="submit" name="addtocart" value="+Thêm vào giỏ hàng">
                     </form>
@@ -72,137 +73,9 @@
                   }
                 
                 ?>
-                <select name="" id="">
-                    <option value="M"></option>
-                    <option value="L"></option>
-                    <option value="XL"></option>
-                </select>
-               <input type="hidden" name="id" value="">
-            <!-- <div class="sp1">
-                <img src="img/SP6.webp" alt="">
-                <p>Áo Sơ Mi DELUXE</p>
-                <span>379.000 đ</span>
-                <form action="" method="post" class="variants" id="" enctype="multipart/form-data">
-                    <button class="giohang" title="Thêm vào giỏ hàng">
-                        + Thêm vào giỏ hàng
-                    </button>
-                </form>
-            </div>
-
-            <div class="sp2">
-                <img src="img/SP2.webp" alt="">
-                <p>Áo Sơ Mi DELUXE</p>
-                <span>379.000 đ</span>
-                <form action="" method="post" class="variants" id="" enctype="multipart/form-data">
-                    <button class="giohang" title="Thêm vào giỏ hàng">
-                        + Thêm vào giỏ hàng
-                    </button>
-                </form>
-            </div>
-
-            <div class="sp3">
-                <img src="img/SP3.webp" alt="">
-                <p>Áo Sơ Mi DELUXE</p>
-                <span>379.000 đ</span>
-                <form action="" method="post" class="variants" id="" enctype="multipart/form-data">
-                    <button class="giohang" title="Thêm vào giỏ hàng">
-                        + Thêm vào giỏ hàng
-                    </button>
-                </form>
-            </div>
-
-            <div class="sp4">
-                <img src="img/SP4.webp" alt="">
-                <p>Áo Sơ Mi DELUXE</p>
-                <span>379.000 đ</span>
-                <form action="" method="post" class="variants" id="" enctype="multipart/form-data">
-                    <button class="giohang" title="Thêm vào giỏ hàng">
-                        + Thêm vào giỏ hàng
-                    </button>
-                </form>
-            </div>
-
-            <div class="sp5">
-                <img src="img/SP5.webp" alt="">
-                <p>Áo Sơ Mi DELUXE</p>
-                <span>379.000 đ</span>
-                <form action="" method="post" class="variants" id="" enctype="multipart/form-data">
-                    <button class="giohang" title="Thêm vào giỏ hàng">
-                        + Thêm vào giỏ hàng
-                    </button>
-                </form>
-            </div> -->
-        </div>
-<!-- 
-        <center>
-            <h2>KHUYẾN MÃI RẺ NHẤT</h2>
-        </center>
-
-        <div class="sanpham2">
-            <div class="sanpham2-khung1">
-                <div class="sp2-1">
-                    <img src="img/SP7.webp" alt="">
-                    <p>Áo Sơ Mi DELUXE</p>
-                    <span>379.000 đ</span>
-                    <form action="" method="post" class="variants" id="" enctype="multipart/form-data">
-                        <button class="giohang" title="Thêm vào giỏ hàng">
-                            + Thêm vào giỏ hàng
-                        </button>
-                    </form>
-                </div>
-                <div class="sp2-2">
-                    <img src="img/SP8.webp" alt="">
-                    <p>Áo Sơ Mi DELUXE</p>
-                    <span>379.000 đ</span>
-                    <form action="" method="post" class="variants" id="" enctype="multipart/form-data">
-                        <button class="giohang" title="Thêm vào giỏ hàng">
-                            + Thêm vào giỏ hàng
-                        </button>
-                    </form>
-                </div>
-                <div class="sp2-3">
-                    <img src="img/SP9.webp" alt="">
-                    <p>Áo Sơ Mi DELUXE</p>
-                    <span>379.000 đ</span>
-                    <form action="" method="post" class="variants" id="" enctype="multipart/form-data">
-                        <button class="giohang" title="Thêm vào giỏ hàng">
-                            + Thêm vào giỏ hàng
-                        </button>
-                    </form>
-                </div>
-            </div>
-            <div class="sanpham2-khung2">
-                <div class="sp2-1">
-                    <img src="img/SP7.webp" alt="">
-                    <p>Áo Sơ Mi DELUXE</p>
-                    <span>379.000 đ</span>
-                    <form action="" method="post" class="variants" id="" enctype="multipart/form-data">
-                        <button class="giohang" title="Thêm vào giỏ hàng">
-                            + Thêm vào giỏ hàng
-                        </button>
-                    </form>
-                </div>
-                <div class="sp2-2">
-                    <img src="img/SP11.webp" alt="">
-                    <p>Áo Sơ Mi DELUXE</p>
-                    <span>379.000 đ</span>
-                    <form action="" method="post" class="variants" id="" enctype="multipart/form-data">
-                        <button class="giohang" title="Thêm vào giỏ hàng">
-                            + Thêm vào giỏ hàng
-                        </button>
-                    </form>
-                </div>
-                <div class="sp2-3">
-                    <img src="img/SP12.webp" alt="">
-                    <p>Áo Sơ Mi DELUXE</p>
-                    <span>379.000 đ</span>
-                    <form action="" method="post" class="variants" id="" enctype="multipart/form-data">
-                        <button class="giohang" title="Thêm vào giỏ hàng">
-                            + Thêm vào giỏ hàng
-                        </button>
-                    </form>
-                </div>
-            </div> -->
         </div>
         </div>
-       
+        </div>
+   <center><div class="seeAll">
+          <a href="index.php?act=listsp">Xem tất cả <ion-icon name="arrow-forward-circle-outline"></ion-icon></a>
+        </div></center> 

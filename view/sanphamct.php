@@ -1,42 +1,52 @@
         <div class="ctsp">
         <?php
                 extract($onesp);
-                $img=$img_path.$img;
+                $hinh=$img_path.$img;
+                if(isset($cart) && is_array($cart)){
+                    extract($cart);
+                $size=get_size_product($cart['size']);
+                }
                 ?>
             <div class="ctsp1">
-                <img  style="width: 470px;height: 470px;" src="<?=$img?>" alt=""> 
+                <img  style="width: 470px;height: 470px;" src="<?=$hinh?>" alt=""> 
             </div>
             <div class="ctsp2">
             
                 <h2><?=$name_sanpham?></h2><br>
                 Product code:<?=$id_sanpham?> <br><br>
                 <p style="font-size: 20px; color: red;"><?=$gia."đ"?></p> <br>
-                <form action="" method="post">
+                <form action="index.php?act=addtocart" method="post" enctype="multipart/form-data">
                 KÍCH THƯỚC <br> <br>
-                <div data-value="M">
-                <input style="border-radius:50%;" value=" M " type="radio" name="size">
+                <div>
+                <input type="radio" value="M" name="size" checked>
                 <label for="">M</label>
                 </div>
-                <div data-value="L">
-                <input style="border-radius:50%;" value=" L " type="radio" name="size">
+                <div>
+                <input type="radio" value="L" name="size">
                 <label for="">L</label>
                 </div>
-                <div data-value="XL">
-                <input style="border-radius:50%;" value=" XL " type="radio" name="size">
+                <div>
+                <input type="radio" value="XL" name="size">
                 <label for="">XL</label>
                 </div>
-                <div data-value="XXL">
-                <input style="border-radius:50%;" value=" XXL " type="radio" name="size">
+                <div>
+                <input type="radio" value="XXL" name="size">
                 <label for="">XXL</label>
                 </div>
                 <br> <br>
                 SỐ LƯỢNG <br>
                 <div class="quantity">
                 <button class="minus-btn" type="button">-</button>
-                    <input type="text" class="qty-input" value="1">
-                    <button class="plus-btn" type="button">+</button> 
-                | <button class="giohangctsp">THÊM VÀO GIỎ
-                        HÀNG</button>
+                    <input type="text" name="soluong" class="qty-input" value="<?=$soluong?>">
+                    <button class="plus-btn" type="button">+</button>
+                    <input type="hidden" name="id" value="<?=$id_sanpham?>">
+                    <input type="hidden" name="name" value="<?=$name_sanpham?>">
+                    <input type="hidden" name="image" value="<?=$img?>">
+                    <input type="hidden" name="kichco" value="<?if(isset($size)) echo $size?>">
+                    <input type="hidden" name="price" value="<?=$gia?>">
+                    <input class="addcart" type="submit" name="addtocart" value="+Thêm vào giỏ hàng">
+                  
+                | 
                 </div>
                 </form>
                 
@@ -69,27 +79,24 @@
 
         <div class="binhluan">
             <h2>Bình Luận</h2> <br>
-            <hr> <br>
-            0 comments<br><br>
-            <hr><br>
-            <img style="width: 60px;height: 60px;" src="img/cmt.png" alt="">
-            <input style="width: 830px;height: 40px; " type="text" placeholder="Add a comment">
-            <input class="binhluan-gui" type="submit" value="POST">
-            <br> <br> <br>
-            <hr>
-            <br>
+            
+            <div class="row mb">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                <script>
+                $(document).ready(function(){
+                    $("#binhluan").load("view/binhluan/binhluanform.php", {idpro:<?=$idsp?> });
+                });
+                </script>
+                 <div class="row" id="binhluan">
+                    
+                </div>
+                </div>
+           
         </div>
-        
-        <div class="danhgia">
-                Hiện tại sản phẩm chưa có đánh giá nào, bạn hãy trở thành người đầu tiên đánh giá cho sản phẩm này
-                <input class="guidanhgia" type="submit" value="Gửi đánh giá của bạn">
-            </div>
         <br><br>
-        <center>
-            <h2>SẢN PHẨM LIÊN QUAN</h2>
-        </center>
-        <br><br>
+        <div class=splq><h2>SẢN PHẨM LIÊN QUAN</h2></div>
         <div class="sanphamall">
+        
         <?php
                  foreach ($sp_cungloai as $sp_cungloai) {
                     $i=0;

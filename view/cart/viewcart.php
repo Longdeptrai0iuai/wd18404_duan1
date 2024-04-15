@@ -5,16 +5,19 @@
                     
                     
                    <?php
-                   if(isset($_SESSION['mycart'])){
-                    viewcart(1);
-                   }else{
+                   
+                   if(empty($_SESSION['mycart'])){
                     $_SESSION['mycart']=[];
-                   } 
+                   }else{
+                    viewcart(1);
+                   }
+                //    var_dump($_SESSION['mycart']);
                     // var_dump($_SESSION['mycart']);
                    ?>
                     </div>
                 
                 </table>
+                <?php if(isset($_SESSION['user']) && $_SESSION['mycart']!=""){?>
                 <div class="row bill">
                     <div class="btn">
                     <a href="index.php?act=bill">
@@ -29,4 +32,7 @@
                 </div>
                 </div>
                 </div>
+                <?php } ?>
                 </div> 
+            
+            

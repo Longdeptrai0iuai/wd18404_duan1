@@ -16,6 +16,18 @@ function load_all_sanpham($iddm){
     $listsanpham = pdo_query($sql);
     return $listsanpham;
 }
+function load_all_sanpham_admin($kyw,$iddm){
+    $sql="select * from sanpham where 1"; 
+    if($iddm>0){
+        $sql.=" and iddm ='".$iddm."' ";
+    }
+    if($kyw!=""){
+        $sql.=" and name_sanpham like '%".$kyw."%'";
+    }
+    $sql.=" order by id_sanpham desc";
+    $listsanpham = pdo_query($sql);
+    return $listsanpham;
+}
 function load_all_sanpham_keyword($kyw){
     $sql="select * from sanpham where 1"; 
     if($kyw!=""){
@@ -35,6 +47,7 @@ function load_one_sanpham($idsp){
     $sp = pdo_query_one($sql);
     return $sp;
 }
+
 // function load_ten_danh_muc($iddm){
 //     if($iddm>0){
 //         $sql="select*from danhmuc where id = ".$iddm;

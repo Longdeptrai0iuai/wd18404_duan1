@@ -40,6 +40,41 @@ font-family: sans-serif;}
     display: grid;
     grid-template-columns:1fr 1fr 1fr;
     padding-left:150px ;
+    
+}
+.binhluan table td{
+    font-size:20px;
+    padding-bottom: 30px;
+}
+.binhluan table tr{
+    width: 500px;
+}
+.binhluan table{
+    width: 1000px;
+    margin-left:-200px;
+    
+}
+.searchbox{
+    margin-top:-300px;
+}
+.boxcontent2.binhluan{
+    border:1px solid #eee;
+    height:400px;
+}
+.searchbox input[type="text"]{
+    width: 950px;
+    margin-top:260px;
+}
+.searchbox input[type="submit"]{
+    width: 100px;
+    height:40px;
+    position: absolute;
+    right:230px;
+    top:1346px;
+}
+.splq{
+    text-align:center;
+    padding-top:200px;
 }
 .namesp{
     text-decoration:none;
@@ -81,6 +116,23 @@ nav ul {
     right:200px;
 
 }
+.checklogin{
+    width: 1060px;
+    height:50px;
+    border:1px solid #333;
+    position: absolute;
+    top:1337px;
+    display:grid;
+    place-items:center;
+}
+.checklogin b{
+    color:red;
+    text-decoration:none;
+}
+.checklogin b a{
+    text-decoration:none;
+}
+
 .user{
     position: absolute;
     top:0px;
@@ -174,8 +226,8 @@ nav ul {
     width: 150px;
 }
 .giohang:hover{
-    background-color: red;
-    color:white;
+    background-color:#eee;
+    color:black;
 }
 .left a{
     color:black;
@@ -351,6 +403,11 @@ input[type=email],
     padding: 10px 20px;
     border: 1px #ccc solid;
 }
+.cart table th{
+    padding: 10px 20px;
+    border: 1px #ccc solid;
+    background-color:#eee;
+}
 .boxtitle{
     padding-left:150px;
     padding-top:30px;
@@ -395,8 +452,103 @@ input[type=email],
     margin-left:150px;
     
 }
+.tinkhuyenmai2{
+    padding: 0 250px;
+}
 .ttbill{
     padding-left:150px;
+}
+p.finally{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 35px;
+}
+.cartFinally{
+    text-align:center;
+}
+.cartFinally ion-icon.md.hydrated {
+    width: 100px;
+    height: 100px;
+}
+p.camon {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+}
+h2.InforBill {
+    font-size: 20px;
+    padding-left: 150px;
+}
+.ttnd p{
+    padding:10px;
+    padding-left:150px;
+}
+.banner3{
+    padding-top:20px;
+}
+.quantity input[type=submit]{
+    width: 150px;
+    height:25px;
+    margin-left:10px;
+    background-color:white;
+    border-radius:5px;
+}
+.quantity input[type=submit]:hover{
+    background-color:#eee;
+}
+.checkusers{
+    padding-left: 150px;
+    padding-top: 50px;
+    color:red;
+}
+.tinkhuyenmai1 input[type="text"]{
+    height:40px;
+    width: 500px;
+}
+.tinkhuyenmai1 input[type="submit"]{
+    height:40px;
+    width: 100px;
+    margin-left:500px;
+    position: absolute;
+    left:60px;
+    top:114px;
+}
+.tinkhuyenmai{
+    position: relative;
+    margin-top:50px;
+}
+.seeAll{
+    width: 150px;
+    height:50px;
+    border:1px solid #333;
+    border-radius:5px;
+    display:grid;
+    place-items:center;
+    margin-top:50px;
+    text-align:center;
+}
+.seeAll a{
+    text-decoration:none;
+    color:black;
+}
+.seeAll:hover{
+    background-color:black;
+}
+.seeAll a:hover{
+    color:white;
+}
+.gioithieu{
+    width: 700px;
+    
+}
+.gioithieu p{
+    text-align:left;
+    padding-bottom:20px;
+    line-height:2;
+}
+.gioithieu h2{
+    text-align:center;
+    padding:20px;
 }
     </style>
 </head>
@@ -433,7 +585,7 @@ input[type=email],
                 <li><a href="index.php?act=inforuser">
                 <?php
                 if($role==1){?>
-                            <li><a href="admin/index.php">
+                            <li><a target = "_ blank" href="admin/index.php">
                             <ion-icon name="people-circle-outline"></ion-icon>   
                             Đăng nhập admin</a></li>
                             <?php }?>
@@ -442,11 +594,7 @@ input[type=email],
                 <ion-icon name="bag-handle-outline"></ion-icon>
                     Đơn Mua
                 </a></li>
-                <li><a href="index.php?act=listsp">
-                <ion-icon name="key-outline"></ion-icon>
-                    Đổi Mật Khẩu
-                </a></li>
-                <li><a href="index.php?act=thoat">
+                <li><a onclick="return confirm('Bạn có muốn đăng xuất không?')" href="index.php?act=thoat">
                 <ion-icon name="log-out-outline"></ion-icon>
                     Đăng Xuất
                 </a></li>
@@ -455,7 +603,9 @@ input[type=email],
                         </div>        
 
                 <span><i class="fa-regular fa-heart"></i></span>    
-                   <a href="index.php?act=addtocart"><span><i class="fa-solid fa-cart-shopping"></i></span></a> 
+                   <a href="index.php?act=addtocart"><span><i class="fa-solid fa-cart-shopping"></i></span>
+                    
+                </a> 
                     </div>
                 </div>
                 <?php   
@@ -476,7 +626,7 @@ input[type=email],
         <nav>
             <ul>
                 <li><a href="index.php">TRANG CHỦ</a></li>
-                <li><a href="">GIỚI THIỆU</a></li>
+                <li><a href="index.php?act=gioithieu">GIỚI THIỆU</a></li>
                 <li><a href="#">HÀNG MỚI VỀ</a></li>
                 <li><a href="#">LIÊN HỆ</a></li>
                 <li><a href="index.php?act=listsp">TẤT CẢ SẢN PHẨM</a></li>
