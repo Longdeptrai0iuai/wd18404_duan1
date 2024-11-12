@@ -1,0 +1,956 @@
+.khungto {
+    width: 100%;
+    height: auto;
+}
+
+.logo1 {
+    width: 200px;
+    margin: 100px 30px;
+}
+
+.logo2 {
+    width: 600px;
+}
+
+.logo2>img {
+    width: 200px;
+    height: 200px;
+    margin: 20px 280px;
+}
+
+.logo3 {
+    width: 300px;
+    margin: 110px 50px;
+}
+
+
+nav ul li {
+    margin-top: 20px;
+    float: left;
+    margin: 0 85px;
+}
+
+nav ul li a {
+    position: relative;
+    display: block;
+    padding: 4px 0;
+    font-family: Lato, sans-serif;
+    color: #0d0e0e;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+nav ul li a::after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #3498db;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+nav ul li a:hover {
+    color: #95a5a6;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+header {
+    width: 100%;
+    height: 700px;
+}
+
+.namesp {
+    text-decoration: none;
+}
+
+.sp1 {
+    width: 280px;
+    height: 400px;
+    text-align: center;
+}
+
+.sp1 img {
+    width: 280px;
+    height: 280px;
+}
+
+.sp2 {
+    width: 280px;
+    height: 400px;
+    text-align: center;
+}
+
+.sp2 img {
+    width: 280px;
+    height: 280px;
+}
+
+.sp3 {
+    width: 280px;
+    height: 400px;
+    text-align: center;
+}
+
+.sp3 img {
+    width: 280px;
+    height: 280px;
+}
+
+.sp4 {
+    width: 280px;
+    height: 400px;
+    text-align: center;
+}
+
+.sp4 img {
+    width: 280px;
+    height: 280px;
+}
+
+.sp5 {
+    width: 280px;
+    height: 400px;
+    text-align: center;
+}
+
+.sp5 img {
+    width: 280px;
+    height: 280px;
+}
+
+
+
+.sanpham2 {
+    width: 100%;
+    height: 1000px;
+}
+
+.sanpham2-khung1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    height: 450px;
+    grid-gap: 155px;
+}
+
+.sanpham2-khung2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    height: 450px;
+    grid-gap: 155px;
+}
+
+.sp2-1 {
+    width: 300px;
+    height: 500px;
+    text-align: center;
+}
+
+.sp2-1 img {
+    width: 350px;
+    height: 350px;
+}
+
+.sp2-2 {
+    width: 300px;
+    height: 500px;
+    text-align: center;
+}
+
+.sp2-2 img {
+    width: 350px;
+    height: 350px;
+}
+
+.sp2-3 {
+    width: 300px;
+    height: 500px;
+    text-align: center;
+}
+
+.sp2-3 img {
+    width: 350px;
+    height: 350px;
+}
+
+.tinkhuyenmai {
+    width: 100%;
+    height: 250px;
+    display: flex;
+}
+
+.tinkhuyenmai1 {
+    padding: 60px 60px;
+}
+
+footer {
+    width: 100%;
+    height: 350px;
+    display: flex;
+}
+
+.ft1 {
+    width: 450px;
+    padding: 20px 130px;
+}
+
+.ft2 {
+    width: 480px;
+    padding: 20px 130px;
+}
+
+.ft3 {
+    width: 460px;
+    padding: 20px 130px;
+}
+
+
+/* ctsp */
+.ctsp1 {
+    width: 50%;
+
+}
+
+.ctsp1 img {
+    margin: 0 110px;
+    transition: transform 0.5s ease;
+}
+
+.ctsp1 img:hover {
+    transform: scale(1.1);
+}
+
+.ctsp2 {
+    width: 50%;
+}
+
+
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.qty-input {
+    width: 50px;
+    text-align: center;
+}
+
+.plus-btn,
+.minus-btn {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.plus-btn:hover,
+.minus-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.giohangctsp {
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    width: 180px;
+    height: 30px;
+}
+
+.giohangctsp:hover {
+    background-color: white;
+    color: black;
+}
+
+.binhluan {
+    width: 100%;
+    height: 300px;
+    padding: 50px 230px;
+}
+
+.binhluan .binhluan-gui {
+    width: 60px;
+    height: 40px;
+    background-color: rgb(200, 200, 255);
+    border: none
+}
+
+.binhluan .binhluan-gui:hover {
+    background-color: #afdfff;
+    color: white;
+}
+
+.danhgia {
+    width: 68%;
+    height: 200px;
+    padding: 50px 150px;
+    border: 1px solid #e0e0e0;
+    margin: 0 230px;
+    background-color: beige;
+}
+
+.danhgia .guidanhgia {
+    width: 160px;
+    height: 30px;
+    background-color: bisque;
+    border: none;
+    border-radius: 5px;
+    margin: 20px 230px;
+}
+
+.danhgia .guidanhgia:hover {
+    background-color: rgb(254, 211, 158);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.sl {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 300px;
+    padding-top: 50px;
+}
+
+.formloc {
+    position: relative;
+}
+
+.sl select {
+    height: 40px;
+    font-size: 15px;
+    width: 160px;
+}
+
+.sanpham {
+    width: 100%;
+    height: 1200px;
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 150px;
+}
+
+.sanphamall {
+    width: 100%;
+    max-height: 1800px;
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 150px;
+
+}
+
+.binhluan table td {
+    font-size: 20px;
+    padding-bottom: 30px;
+}
+
+.binhluan table tr {
+    width: 500px;
+}
+
+.binhluan table {
+    width: 1000px;
+    margin-left: -200px;
+
+}
+
+.searchbox {
+    margin-top: -300px;
+}
+
+.boxcontent2.binhluan {
+    border: 1px solid #eee;
+    height: 400px;
+}
+
+.searchbox input[type="text"] {
+    width: 950px;
+    margin-top: 260px;
+}
+
+.searchbox input[type="submit"] {
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    right: 230px;
+    top: 1346px;
+}
+
+.splq {
+    text-align: center;
+    padding-top: 200px;
+}
+
+.namesp {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+
+.giasp {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+
+.namesp:hover {
+    color: red;
+}
+
+nav ul {
+    width: 100%;
+    height: 40px;
+    list-style-type: none;
+    display: flex;
+    padding-left: 70px;
+    font-weight: 600;
+
+}
+
+.khung1 {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    padding: 0px 90px;
+    position: relative;
+}
+
+.logo3 {
+    width: 300px;
+    margin: 110px 50px;
+}
+
+.left {
+    position: absolute;
+    top: 130px;
+    right: 200px;
+
+}
+
+.checklogin {
+    width: 1060px;
+    height: 50px;
+    border: 1px solid #333;
+    position: absolute;
+    top: 1337px;
+    display: grid;
+    place-items: center;
+}
+
+.checklogin b {
+    color: red;
+    text-decoration: none;
+}
+
+.checklogin b a {
+    text-decoration: none;
+}
+
+.user {
+    position: absolute;
+    top: 0px;
+    right: -50px;
+}
+
+.left span {
+    font-size: 30px;
+}
+
+.logo1 span {
+    font-size: 30px;
+    position: absolute;
+    top: 130px;
+    left: 150px;
+}
+
+.logo1 form input[type=text] {
+    position: absolute;
+    top: 130px;
+    left: 200px;
+    height: 30px;
+    width: 200px;
+    border: none;
+    border-bottom: 2px solid #000;
+    background: transparent;
+    outline: 0;
+}
+
+.tintuc {
+    padding-top: 350px;
+    width: 100%;
+    height: 950px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
+
+.khungbe1 {
+    width: 500px;
+    height: 600px;
+    overflow: hidden;
+    margin-left: 200px;
+}
+
+.khungbe1 img {
+    width: 500px;
+    height: 600px;
+    transition: all .3s ease;
+}
+
+.khungbe1 img:hover {
+    transform: scale(1.3);
+}
+
+.khungbe2 {
+    width: 500px;
+    height: 600px;
+    overflow: hidden;
+    margin-left: 50px;
+}
+
+.khungbe2 img {
+    width: 500px;
+    height: 600px;
+    transition: all .3s ease;
+}
+
+.khungbe2 img:hover {
+    transform: scale(1.3);
+}
+
+.conTent {
+    padding-top: 50px;
+}
+
+.boxs {
+    display: flex;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.box1 {
+    height: 60px;
+    width: 670px;
+    background-color: #d7d4d4;
+    margin: 0 1px;
+}
+
+.ctsp {
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.allsp {
+    text-align: center;
+    padding: 30px;
+}
+
+.giohang {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 25px;
+    width: 150px;
+}
+
+.giohang:hover {
+    background-color: #eee;
+    color: black;
+}
+
+.left a {
+    color: black;
+}
+
+.tt1 {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style inputs */
+input[type=text],
+select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type=email],
+select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.fdn2 input[type=int],
+select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.fdn2 input[type=password],
+select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.fdn1 {
+    text-align: center;
+}
+
+.fdn1 label {
+    margin-left: -660px
+}
+
+.fdn2 label {
+    margin-left: -690px
+}
+
+.fdn2 .fdn3 {
+    margin-left: -720px
+}
+
+.fdn2 .fdn4 {
+    margin-left: -670px
+}
+
+.fdn2 a {
+    text-decoration: none;
+    color: red;
+}
+
+.fdn2 .forgetpass {
+    margin-left: 650px;
+    text-decoration: none;
+    color: red;
+}
+
+.fdn2 {
+    text-align: center;
+}
+
+/* Style the submit button */
+.fdn2 input[type=submit] {
+    width: 50%;
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Add a background color to the submit button on mouse-over */
+.fdn2 input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.thongbao {
+    color: red;
+    padding-left: 380px;
+    text-decoration: none;
+}
+
+.quantity input {
+    width: 50px;
+    height: 20px;
+}
+
+.ctsp3 {
+    width: 95%;
+    border: 1px solid black;
+    padding: 15px 15px;
+    width: 550px;
+}
+
+.logo1 input[type="submit"] {
+    background-image: url('image/Search-icon.png');
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    border: 1px solid white;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 130px;
+    left: 150px;
+}
+
+.sl input[type="submit"] {
+    border: 1px solid black;
+    background-color: white;
+    height: 30px;
+    width: 70px;
+}
+
+.resultsearch {
+    padding-top: 50px;
+    padding-left: 180px;
+    font-size: 20px;
+}
+
+.informationUser {
+    display: none;
+    z-index: 1000;
+    width: 200px;
+    position: absolute;
+    top: 35px;
+    right: 5px;
+    background-color: #eee;
+}
+
+.informationUser ul li a {
+    text-decoration: none;
+
+}
+
+.informationUser ul li {
+    list-style: none;
+}
+
+.nameuser {
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    right: 160px;
+}
+
+.iconuser {
+    width: 20px;
+    position: absolute;
+    top: 0px;
+    right: 190px;
+}
+
+.user:hover .informationUser {
+    display: block;
+}
+
+.hoso {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 370px;
+    font-size: 20px;
+}
+
+.cart table {
+    width: 70%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-left: 150px;
+}
+
+.cart table td {
+    padding: 10px 20px;
+    border: 1px #ccc solid;
+}
+
+.cart table th {
+    padding: 10px 20px;
+    border: 1px #ccc solid;
+    background-color: #eee;
+}
+
+.boxtitle {
+    padding-left: 150px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 30px;
+}
+
+.bill {
+    position: relative;
+}
+
+.btn input[type="submit"] {
+    border-radius: 5px;
+    padding: 5px 10px;
+    height: 30px;
+    background-color: white;
+    border: 1px #ccc solid;
+    position: absolute;
+    top: 10px;
+    left: 150px;
+}
+
+.btn input[type="button"] {
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px #ccc solid;
+    position: absolute;
+    height: 30px;
+    top: 10px;
+    left: 280px;
+}
+
+.delete {
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px #ccc solid;
+}
+
+.boxcontent input[type="text"] {
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px #ccc solid;
+    width: 100%;
+    margin-left: 150px;
+
+}
+
+.tinkhuyenmai2 {
+    padding: 0 250px;
+}
+
+.ttbill {
+    padding-left: 150px;
+}
+
+p.finally {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 35px;
+}
+
+.cartFinally {
+    text-align: center;
+}
+
+.cartFinally ion-icon.md.hydrated {
+    width: 100px;
+    height: 100px;
+}
+
+p.camon {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+h2.InforBill {
+    font-size: 20px;
+    padding-left: 150px;
+}
+
+.ttnd p {
+    padding: 10px;
+    padding-left: 150px;
+}
+
+.banner3 {
+    padding-top: 20px;
+}
+
+.quantity input[type=submit] {
+    width: 150px;
+    height: 25px;
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.quantity input[type=submit]:hover {
+    background-color: #eee;
+}
+
+.checkusers {
+    padding-left: 150px;
+    padding-top: 50px;
+    color: red;
+}
+
+.tinkhuyenmai1 input[type="text"] {
+    height: 40px;
+    width: 500px;
+}
+
+.tinkhuyenmai1 input[type="submit"] {
+    height: 40px;
+    width: 100px;
+    margin-left: 500px;
+    position: absolute;
+    left: 60px;
+    top: 114px;
+}
+
+.tinkhuyenmai {
+    position: relative;
+    margin-top: 50px;
+}
+
+.seeAll {
+    width: 150px;
+    height: 50px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.seeAll a {
+    text-decoration: none;
+    color: black;
+}
+
+.seeAll:hover {
+    background-color: black;
+}
+
+.seeAll a:hover {
+    color: white;
+}
+
+.gioithieu {
+    width: 700px;
+
+}
+
+.gioithieu p {
+    text-align: left;
+    padding-bottom: 20px;
+    line-height: 2;
+}
+
+.gioithieu h2 {
+    text-align: center;
+    padding: 20px;
+}

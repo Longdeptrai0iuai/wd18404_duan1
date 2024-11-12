@@ -1,0 +1,5 @@
+<center><div class="gioithieu">
+<h2>Giới thiệu</h2>
+<p><b>MENSWEAR</b> là thương hiệu thời trang nam khác biệt, đầy cá tính, sang trọng và gọn gàng. <b>MENSWEAR</b> yêu thời trang, xem trọng việc làm sao để thiết kế được sản phẩm mà người Việt cảm thấy phù hợp và chất lượng. Phù hợp ở đây là chuẩn phom dáng người, hợp xu hướng. Chất lượng ở đây là phải chất từ sự chi tiết, đường chỉ may cẩn thận, hàng được duyệt kiểm tra 3 công đoạn nghiêm ngặt trước khi đóng gói giao tới khách hàng, đặc biệt hơn MENSWEAR luôn nghiên cứu để có được những chất vải thoáng mát, mịn màng làm bạn mặc vô cảm thấy thật tuyệt.</p>
+<p><b>MENSWEAR</b> không giản đơn, chúng tôi thích độc đáo và mới mẻ, là sự kết hợp giữa văn hoá Châu Á và đậm chất Châu Âu. Không phải một sản phẩm với tông màu trắng đen mà <b>MENSWEAR</b> chọn sự đa dạng phong phú về màu và hoạ tiết. <b>MENSWEAR</b> khuyến khích bạn thay đổi, thử một gu ăn mặc mới, mang một màu sắc mới cho bản thân. <b>MENSWEAR </b>dần mở rộng thị trường trong suốt quá trình phát triển các chi nhánh toàn quốc, đem tới một nền văn hoá thời trang rất riêng và chỉ có ở <b>MENSWEAR</b>.</p>
+</div></center>
