@@ -7,7 +7,7 @@ function delete_sanpham($idsp){
     $sql="delete from sanpham where id_sanpham=".$idsp;
     pdo_query($sql);
 }
-function load_all_sanpham($iddm){
+function load_all_sanpham($iddm = ""){
     $sql="select * from sanpham where 1"; 
     if($iddm>0){
         $sql.=" and iddm ='".$iddm."' ";
@@ -24,8 +24,28 @@ function load_all_sanpham_keyword($kyw){
     $listsanpham = pdo_query($sql);
     return $listsanpham;
 }
+function get_iddm($n){
+    switch ($n) {
+        case '4 ':
+          $tt="Áo sơ mi";
+          break;
+        case '5':
+            $tt="Áo pholo";
+            break;
+        case '6':
+            $tt="Áo khoác kaki";
+            break;
+        case '10':
+            $tt="Quần Jean";
+            break;
+        default:
+            $tt="Chưa có iddm";
+            break;
+    }
+    return $tt;
+}
 function load_all_sanpham_home(){
-    $sql="select * from sanpham where 1 order by idsp desc limit 0,9"; 
+    $sql="select * from sanpham where 1 order by id_sanpham desc limit 0,9"; 
     $listsanpham = pdo_query($sql);
     return $listsanpham;
 }

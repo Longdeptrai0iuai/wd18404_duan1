@@ -18,8 +18,8 @@
             <?php
             foreach($listtaikhoan as $taikhoan){
                 extract($taikhoan);
+                $role = get_role($taikhoan['role']);
                 $suatk="index.php?act=suatk&id=".$idtk;
-                $xoatk="index.php?act=xoatk&id=".$idtk;
                 echo '<tr>
                 <td>'.$idtk.'</td>
                 <td>'.$username.'</td>
@@ -29,8 +29,7 @@
                 <td>'.$phone.'</td>
                 <td>'.$role.'</td>
                 <td>
-                <a href="'.$suatk.'"><input type="button" value="Sửa"></a>   
-                <a href="'.$xoatk.'"><input type="button" value="Xóa"></a>    
+                <a href="'.$suatk.'"><input type="button" value="Sửa"></a>      
                 </td>
                 
             </tr>';

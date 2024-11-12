@@ -22,23 +22,23 @@
                     <ion-icon name="folder-open-outline"></ion-icon>
                     Quản Lý Danh Mục
                 </a></li>
-                <li><a href="index.php?act=addsp">
+                <li><a href="index.php?act=dssp">
                     <ion-icon name="shirt-outline"></ion-icon>
                     Quản Lý Sản Phẩm
                 </a></li>
-                <li><a href="">
+                <li><a href="index.php?act=dstk">
                     <ion-icon name="person-circle-outline"></ion-icon>
                     Quản Lý Tài Khoản
                 </a></li>
-                <li><a href="">
+                <li><a href="index.php?act=dsbl">
                     <ion-icon name="chatbox-outline"></ion-icon>
                     Quản Lý Bình Luận
                 </a></li>
-                <li><a href="">
+                <li><a href="index.php?act=dsdh">
                     <ion-icon name="bag-handle-outline"></ion-icon>
                     Quản Lý Đơn Hàng
                 </a></li>
-                <li><a href="">
+                <li><a href="index.php?act=thongke">
                     <ion-icon name="cellular-outline"></ion-icon>    
                     Thống Kê
                 </a></li>

@@ -1,6 +1,5 @@
 <?php
-ob_start();
-require_once "config.php";
+
 session_start();
 include "view/header.php";
 include "model/sanpham.php";

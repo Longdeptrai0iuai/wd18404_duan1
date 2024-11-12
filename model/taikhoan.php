@@ -27,6 +27,17 @@ function checkuser($username,$password){
 //     $tk=pdo_query_one($sql);
 //     return $tk;
 // }
+function get_role($n){
+    switch ($n) {
+        case '1':
+          $tt="Admin";
+          break;
+        default:
+            $tt="User";
+            break;
+    }
+    return $tt;
+}
 function update_taikhoan_admin($idtk,$username,$password,$name,$email,$address,$phone,$role){
       $sql="update taikhoan set username='".$username."',password='".$password."',name='".$name."',email='".$email."',address='".$address."',phone='".$phone."',role='".$role."' where idtk=".$idtk;
     pdo_execute($sql);
