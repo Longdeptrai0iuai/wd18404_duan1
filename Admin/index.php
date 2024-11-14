@@ -1,4 +1,6 @@
 <?php
+include "function.php";
+checkLoginAdmin();
 include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
@@ -6,6 +8,7 @@ include "../model/taikhoan.php";
 include "../model/binhluan.php";
 include "../model/cart.php";
 include "header.php";
+include "global.php";
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
     switch ($act) {

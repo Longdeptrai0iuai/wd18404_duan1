@@ -3,8 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/styleadmin.css">
+    <title>Trang Admin</title>
+    <link rel="stylesheet" href="../css/styleadmin.css"> 
+    <style>
+        .cart table {
+    width: 70%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-left: 50px;
+}
+
+.cart table td {
+    padding: 10px 20px;
+    border: 1px #ccc solid;
+}
+
+.cart table th {
+    padding: 10px 20px;
+    border: 1px #ccc solid;
+    background-color: #eee;
+}
+h2.InforBill {
+    font-size: 30px;
+    padding-left: 50px;
+}
+.imgad {
+    height: 80px;
+    width: 80px;
+}
+    </style>   
 </head>
 <body>
         <nav> 

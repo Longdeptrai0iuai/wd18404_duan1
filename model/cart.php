@@ -68,7 +68,7 @@ function lichsu_bill_chitiet($ctbill){
         $tong+=$cart['thanhtien'];       
         echo '<tr>
         <td>'.$cart['name'].'</td>
-        <td><img src="'.$hinh.'" alt="" height="80px"></td>
+        <td><img class="imgad" src="'.$hinh.'" alt="" height="80px"></td>
         <td>'.$cart['price'].'</td>
         <td>'.$cart['size'].'</td>
         <td>'.$cart['soluong'].'</td>

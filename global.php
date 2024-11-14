@@ -1,3 +1,3 @@
 <?php
-$img_path="image/";
+$img_path="/image/";
 ?>

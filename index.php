@@ -143,12 +143,18 @@ if(isset($_GET['act']) && $_GET['act'] !=""){
                 $size=$_POST['size'];
                 $ttien= $soluong* $price;
                 $spadd=[$idsp,$namesp,$img,$price,$size,$soluong,$ttien];
-                if(isset($_SESSION['user'])){
-                    array_push($_SESSION['mycart'],$spadd);
-                }else{
-                    $_SESSION['mycart']=[];
+                if (isset($_SESSION['user'])) {
+                    // Kiểm tra nếu 'mycart' chưa tồn tại hoặc không phải là mảng, khởi tạo nó là một mảng rỗng
+                    if (!isset($_SESSION['mycart']) || !is_array($_SESSION['mycart'])) {
+                        $_SESSION['mycart'] = [];
+                    }
+                    array_push($_SESSION['mycart'], $spadd);
+                } else {
+                    // Khởi tạo 'mycart' là một mảng rỗng nếu người dùng chưa đăng nhập
+                    $_SESSION['mycart'] = [];
                     echo '<p class="checkusers">Vui lòng đăng nhập để thực hiện chức năng mua hàng</p>';
                 }
+                
             }
             include "view/cart/viewcart.php";
             break;

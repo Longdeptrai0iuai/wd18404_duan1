@@ -10,5 +10,5 @@
             </table>
         </div>
     </div>
-    <a href="index.php?act=listbill">Quay về trang quản lí đơn hàng</a>
+    <a href="index.php?act=dsdh">Quay về trang quản lí đơn hàng</a>
 </div>
