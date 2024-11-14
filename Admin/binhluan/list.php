@@ -7,7 +7,7 @@
            <table>
             <tr>
                 <th>Mã bình luận</th>
-                <th>Username</th>
+                <th>Name</th>
                 <th>Nội dung </th>
                 <th>ID sản phẩm</th>
                 <th>Ngày bình luận</th>

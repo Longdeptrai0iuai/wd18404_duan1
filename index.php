@@ -67,7 +67,7 @@ if(isset($_GET['act']) && $_GET['act'] !=""){
                 $iddm= 0;
             }
             $listdanhmuc=load_all_danhmuc();
-            $listsanpham=load_all_sanpham($iddm);     
+            $listsanpham=load_all_sanpham_by_danhmuc($iddm);     
             include "view/showallsp.php";
             break;
         case 'dangnhap':

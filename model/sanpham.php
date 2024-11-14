@@ -1,13 +1,30 @@
 <?php
 function insert_sanpham($tensp,$hinh,$mota,$giasp,$iddm){
-    $sql="INSERT INTO sanpham(name_sanpham,img,mota,gia,id_danhmuc) values('$tensp','$hinh','$mota','$giasp','$iddm')";
+    $sql="INSERT INTO sanpham(name_sanpham,img,mota,gia,iddm) values('$tensp','$hinh','$mota','$giasp','$iddm')";
     pdo_execute($sql);
 }
 function delete_sanpham($idsp){
     $sql="delete from sanpham where id_sanpham=".$idsp;
     pdo_query($sql);
 }
-function load_all_sanpham($iddm = ""){
+function load_all_sanpham_by_danhmuc_and_kyw($iddm,$kyw){
+    $sql="select * from sanpham where 1"; 
+    if($iddm>0){
+        $sql.=" and iddm ='".$iddm."' ";
+    }
+    if($kyw!=""){
+        $sql.=" and name_sanpham like '%".$kyw."%'";
+    }
+    $sql.=" order by id_sanpham desc";
+    $dssp = pdo_query($sql);
+    return $dssp;
+}
+function load_all_sanpham(){
+    $sql="select * from sanpham where 1 order by id_sanpham desc"; 
+    $listsanpham = pdo_query($sql);
+    return $listsanpham;
+}
+function load_all_sanpham_by_danhmuc($iddm){
     $sql="select * from sanpham where 1"; 
     if($iddm>0){
         $sql.=" and iddm ='".$iddm."' ";
@@ -71,7 +88,7 @@ function load_ten_danh_muc($iddm){
     
 }
 function load_sanpham_cung_loai($idsp,$iddm){
-    $sql="select*from sanpham where iddm=".$iddm." AND idsp <> ".$idsp;
+    $sql="select*from sanpham where iddm=".$iddm." AND id_sanpham <> ".$idsp;
     $listsanpham = pdo_query($sql);
     return $listsanpham;
 }

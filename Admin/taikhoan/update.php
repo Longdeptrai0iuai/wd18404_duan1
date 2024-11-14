@@ -20,6 +20,10 @@
                 <div class="row mb10">
                     Email <br>
                     <input type="email" name="email" value="<?=$email?>">
+                </div>  
+                <div class="row mb10">
+                    Name <br>
+                    <input type="text" name="name" value="<?=$name?>">
                 </div>   
                 <div class="row mb10">
                     Địa chỉ <br>
@@ -31,7 +35,10 @@
                 </div>
                 <div class="row mb10">
                     Vai trò  <br>
-                <input type="text" name="role" value="<?=$role?>">
+                <select name="role">
+                        <option value="1" <?php echo ($role ==1) ?'selected':''?>>Admin</option>
+                         <option value="0" <?php echo ($role ==0) ?'selected':''?>>User</option>
+                </select>
                 </div>
                 <div class="row mb10">
                     <input type="hidden" name="id" value="<?php echo $idtk?>">

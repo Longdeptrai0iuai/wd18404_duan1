@@ -695,21 +695,6 @@ select {
     padding: 15px 15px;
     width: 550px;
 }
-
-.logo1 input[type="submit"] {
-    background-image: url('image/Search-icon.png');
-    background-size: 30px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: white;
-    border: 1px solid white;
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    top: 130px;
-    left: 150px;
-}
-
 .sl input[type="submit"] {
     border: 1px solid black;
     background-color: white;

@@ -7,6 +7,21 @@
     <title>Trang chủ</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../css/styletrangchu.css" />
+    <style>
+        .logo1 input[type="submit"] {
+    background-image: url('image/Search-icon.png');
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    border: 1px solid white;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 130px;
+    left: 150px;
+}   
+    </style>
 </head>
 
 <body>
@@ -70,9 +85,7 @@
                         <div class="logo3">
                     <div class="left">
                 <a href="index.php?act=login"><span><i class="fa-regular fa-user">
-                </i></span></a> 
-                <ion-icon name="accessibility-outline"></ion-icon>
-                
+                </i></span></a>         
                 <span><i class="fa-regular fa-heart"></i></span>    
                     <span><i class="fa-solid fa-cart-shopping"></i></span>
                     </div>

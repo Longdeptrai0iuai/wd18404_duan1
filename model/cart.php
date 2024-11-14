@@ -162,14 +162,14 @@ function load_one_cart($idsp){
     $cart = pdo_query_one($sql);
     return $cart;
 }
-function load_all_bill($iduser){
+function load_all_bill($iduser=""){
     $sql="select*from bill where 1"; 
     if($iduser>0) $sql.=" AND iduser = ".$iduser;
     $sql.=" order by id desc"; 
     $listbill = pdo_query($sql);
     return $listbill;
 }
-function load_one_billct($iduser){
+function load_one_billct($iduser=""){
     $sql="select*from bill where 1"; 
     if($iduser>0) $sql.=" AND iduser = ".$iduser;
     $sql.=" order by id desc"; 

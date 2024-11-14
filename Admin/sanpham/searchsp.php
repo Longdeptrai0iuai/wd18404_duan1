@@ -39,7 +39,7 @@
                 <th></th>
             </tr>
             <?php
-            foreach($listsanpham as $sanpham){
+            foreach($dssp as $sanpham){
                 extract($sanpham);
                 $suasp="index.php?act=suasp&id=".$id_sanpham;
                 $showsp="index.php?act=showsp&id=".$id_sanpham;
